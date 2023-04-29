@@ -131,6 +131,18 @@ func Register() {
 			
 		})
 	
+	revel.RegisterController((*controllers1.TodoController)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Create",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
 	revel.DefaultValidationKeys = map[string]map[int]string{ 
 	}
 	testing.TestSuites = []interface{}{ 

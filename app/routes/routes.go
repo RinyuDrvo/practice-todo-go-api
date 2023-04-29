@@ -110,3 +110,15 @@ func (_ tApp) Index(
 }
 
 
+type tTodoController struct {}
+var TodoController tTodoController
+
+
+func (_ tTodoController) Create(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("TodoController.Create", args).URL
+}
+
+
