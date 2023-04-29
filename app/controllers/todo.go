@@ -15,6 +15,7 @@ type Todo struct {
 	ID        int    `json:"id"`
 	Title     string `json:"title"`
 	Completed bool   `json:"completed"`
+	Detail string `json:"detail"`
 }
 
 type TodoController struct {
@@ -45,3 +46,22 @@ func (c TodoController) Create() revel.Result {
 	return c.RenderJSON(todo)
 }
 
+/** タスク一覧 TODO: */
+func (c TodoController) List() revel.Result {
+	todos := []Todo{
+		{
+			ID:        1,
+			Title:     "タスク1",
+			Completed: false,
+			Detail: "detail1",
+		},
+		{
+			ID:        2,
+			Title:     "タスク2",
+			Completed: true,
+			Detail: "detail2",
+		},
+	}
+
+	return c.RenderJSON(todos)
+}

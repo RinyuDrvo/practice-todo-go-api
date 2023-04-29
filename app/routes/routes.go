@@ -121,4 +121,11 @@ func (_ tTodoController) Create(
 	return revel.MainRouter.Reverse("TodoController.Create", args).URL
 }
 
+func (_ tTodoController) List(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("TodoController.List", args).URL
+}
+
 
