@@ -1,4 +1,4 @@
-# practice-todo-nuxt
+# practice-todo-go-api
 
 GoLang/Revel を使用した学習用デモアプリ API
 
